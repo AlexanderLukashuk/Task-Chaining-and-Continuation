@@ -1,9 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using Internal;
-using System;
-using System.Threading.Tasks;
-
 Task<int[]> task1 = Task.Factory.StartNew(() => CreateRandomArray(10));
 Task<int[]> task2 = task1.ContinueWith(array => MultiplyArray(array.Result));
 Task<int[]> task3 = task2.ContinueWith(array => SortArrayAscending(array.Result));
